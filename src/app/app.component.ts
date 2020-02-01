@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public titulo: string = "Meu primeiro projeto angular!";
-
+  public todoList= [];
   //1ª função a ser executada
   constructor(){
     console.log('Comecei a executar');
@@ -15,5 +15,6 @@ export class AppComponent {
 
   getTarefa(tarefa:string): void{
     console.log('A tarefa foi', tarefa);
+    this.todoList.push({title:tarefa});
   }
 }
